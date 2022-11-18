@@ -83,10 +83,15 @@ struct Wheather: View {
                                         .foregroundColor(Color("rect"))
                                 }
                                 VStack(alignment: .leading,spacing: 10){
-                                        Text("Stay Informed")
+                                    HStack{
+                                        Text("Stay Informed                        ")
                                             .font(Font.system(size: 20, weight: .bold))
                                             .foregroundColor(.white)
-                                    
+                                        Image("im3")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 20)
+                                    }
                                         Text("Get notifications for severe weather, rain and snow.")
                                             .frame(maxWidth:250)
                                             .foregroundColor(Color("RectText"))
