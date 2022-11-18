@@ -14,10 +14,7 @@ struct Wheather: View {
                 Image("Cloud")
                     .frame(width: 900,height: 900)
                     .ignoresSafeArea()
-                Spacer(minLength:150)
-                
                 VStack{
-                   
                     Text("Hamilton")
                         .foregroundColor(Color.white)
                         .font(.largeTitle)
@@ -35,15 +32,14 @@ struct Wheather: View {
                             .foregroundColor(Color.white)
                             .font(Font.system(size: 30, weight: .medium))
                     }
-                    Spacer(minLength:150)
                     VStack{
                         ZStack{
                             RoundedRectangle(cornerRadius: 20)
-                                .frame(width: 320,height: 150)
+                                .frame(width: 340,height: 150)
                                 .foregroundColor(Color("rect"))
                             VStack(alignment: .leading,spacing: 10){
                                 Text("Possible Light Rain")
-                                    .font(Font.system(size: 20, weight: .bold))
+                                    .font(Font.system(size: 20, weight: .regular))
                                     .foregroundColor(.white)
                                 Text("Chance of light rain in the next hour.")
                                     .foregroundColor(Color("RectText"))
@@ -51,7 +47,6 @@ struct Wheather: View {
                                     Text("Now")
                                         .foregroundColor(Color("graydark"))
                                         .font(Font.system(size: 18, weight: .black))
-                                    
                                     Text("10m")
                                         .foregroundColor(Color("graydark"))
                                     Text("20m")
@@ -69,42 +64,59 @@ struct Wheather: View {
                     VStack{
                         ZStack{
                             RoundedRectangle(cornerRadius: 20)
-                                .frame(width: 320,height: 150)
+                                .frame(width: 340,height: 150)
                                 .foregroundColor(Color("rect"))
-                            VStack{
-                                Image()
-                                HStack{
+                            HStack{
+                                    Image(systemName:"cloud.bolt")
+                                        .foregroundColor(Color.white)
+                                        .frame(width: 50)
+                                VStack(alignment: .leading,spacing: 10){
                                     Text("Stay Informed")
                                         .font(Font.system(size: 20, weight: .bold))
                                         .foregroundColor(.white)
-                                    Text("Get notifications for severe weather, rain, and snow.")
+                                    Text("Get notifications for severe")
                                         .foregroundColor(Color("RectText"))
-                                    Divider()
-                                    List{
-                                        Text("Enable Notifications")
-                                        foregroundColor(.gray)
+                                    RoundedRectangle(cornerRadius: 20)
+                                        .frame(width: 280,height: 1)
+                                        .foregroundColor(Color("RectText"))
+                                    HStack{
+                                        Text("Enable Notifications                ")
+                                            .foregroundColor(.white)
+                                        Image(systemName: "chevron.right")
+                                            .foregroundColor(.white)
+                                    }
+                                        
                                     }
                                 }
                             }
-                            
                         }
-                    }
-                    VStack{
+                    VStack(alignment: .leading,spacing: 10){
                         ZStack{
                             RoundedRectangle(cornerRadius: 20)
-                                .frame(width: 320,height: 150)
+                                .frame(width: 340,height: 150)
                                 .foregroundColor(Color("rect"))
-                            Text("Loading")
+                            HStack{
+                                Image(systemName:"clock")
+                                    .foregroundColor(Color("RectText"))
+                                    .font(Font.system(size: 15, weight: .light))
+                                Text("HOURLY FORECAST")
+                                    .foregroundColor(Color("RectText"))
+                                    .font(Font.system(size: 15, weight: .light))
+                            }
                         }
+                    }
+
+                        
                     }
                 }
             }
         }
     }
     
+    
     struct Wheather_Previews: PreviewProvider {
         static var previews: some View {
             Wheather()
         }
     }
-}
+

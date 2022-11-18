@@ -12,7 +12,9 @@ import SwiftUI
 struct TaskMod1App: App {
     var body: some Scene {
         WindowGroup {
-            Wheather()
+                
+                    Wheather()
+                        
+            }
         }
     }
-}
