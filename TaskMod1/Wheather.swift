@@ -19,23 +19,23 @@ struct Wheather: View {
                         .foregroundColor(Color.white)
                         .font(.largeTitle)
                     Text("4°")
-                        .font(Font.system(size: 110, weight: .thin))
+                        .font(Font.system(size: 90, weight: .thin))
                         .foregroundColor(Color.white)
                     Text("Cloudy")
                         .foregroundColor(Color.white)
-                        .font(Font.system(size: 30, weight: .regular))
+                        .font(Font.system(size: 20, weight: .regular))
                     HStack{
                         Text("H:5°")
                             .foregroundColor(Color.white)
-                            .font(Font.system(size: 30, weight: .medium))
+                            .font(Font.system(size: 20, weight: .medium))
                         Text("L:1°")
                             .foregroundColor(Color.white)
-                            .font(Font.system(size: 30, weight: .medium))
+                            .font(Font.system(size: 20, weight: .medium))
                     }
-                    VStack{
+                    VStack(spacing: 1){
                         ZStack{
                             RoundedRectangle(cornerRadius: 20)
-                                .frame(width: 340,height: 150)
+                                .frame(width: 340,height: 170)
                                 .foregroundColor(Color("rect"))
                             VStack(alignment: .leading,spacing: 10){
                                 Text("Possible Light Rain")
@@ -43,19 +43,23 @@ struct Wheather: View {
                                     .foregroundColor(.white)
                                 Text("Chance of light rain in the next hour.")
                                     .foregroundColor(Color("RectText"))
+                              Image("img1")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 310)
                                 HStack{
-                                    Text("Now")
+                                    Text("Now ")
                                         .foregroundColor(Color("graydark"))
-                                        .font(Font.system(size: 18, weight: .black))
-                                    Text("10m")
+                                        .font(Font.system(size: 15, weight: .black))
+                                    Text("  10m")
                                         .foregroundColor(Color("graydark"))
-                                    Text("20m")
+                                    Text("  20m")
                                         .foregroundColor(Color("graydark"))
-                                    Text("30m")
+                                    Text("  30m")
                                         .foregroundColor(Color("graydark"))
-                                    Text("40m")
+                                    Text(" 40m")
                                         .foregroundColor(Color("graydark"))
-                                    Text("50m")
+                                    Text("  50m")
                                         .foregroundColor(Color("graydark"))
                                 }
                             }
@@ -63,19 +67,30 @@ struct Wheather: View {
                     }
                     VStack{
                         ZStack{
-                            RoundedRectangle(cornerRadius: 20)
+                            RoundedRectangle(cornerRadius: 15)
                                 .frame(width: 340,height: 150)
                                 .foregroundColor(Color("rect"))
                             HStack{
-                                    Image(systemName:"cloud.bolt")
+                                VStack{
+                        
+                                    Image("im2")
+                                        .resizable()
                                         .foregroundColor(Color.white)
-                                        .frame(width: 50)
+                                        .scaledToFit()
+                                        .frame(width: 50,height: 50)
+                                    RoundedRectangle(cornerRadius: 20)
+                                        .frame(width: 10,height: 80)
+                                        .foregroundColor(Color("rect"))
+                                }
                                 VStack(alignment: .leading,spacing: 10){
-                                    Text("Stay Informed")
-                                        .font(Font.system(size: 20, weight: .bold))
-                                        .foregroundColor(.white)
-                                    Text("Get notifications for severe")
-                                        .foregroundColor(Color("RectText"))
+                                        Text("Stay Informed")
+                                            .font(Font.system(size: 20, weight: .bold))
+                                            .foregroundColor(.white)
+                                    
+                                        Text("Get notifications for severe weather, rain and snow.")
+                                            .frame(maxWidth:250)
+                                            .foregroundColor(Color("RectText"))
+                                    
                                     RoundedRectangle(cornerRadius: 20)
                                         .frame(width: 280,height: 1)
                                         .foregroundColor(Color("RectText"))
@@ -85,38 +100,113 @@ struct Wheather: View {
                                         Image(systemName: "chevron.right")
                                             .foregroundColor(.white)
                                     }
-                                        
-                                    }
+                                    
                                 }
                             }
                         }
-                    VStack(alignment: .leading,spacing: 10){
+                    }
+                    VStack{
                         ZStack{
                             RoundedRectangle(cornerRadius: 20)
                                 .frame(width: 340,height: 150)
                                 .foregroundColor(Color("rect"))
-                            HStack{
-                                Image(systemName:"clock")
-                                    .foregroundColor(Color("RectText"))
-                                    .font(Font.system(size: 15, weight: .light))
-                                Text("HOURLY FORECAST")
-                                    .foregroundColor(Color("RectText"))
-                                    .font(Font.system(size: 15, weight: .light))
+                            VStack(alignment: .leading,spacing: 10){
+                                HStack{
+                                    Image(systemName:"clock")
+                                        .foregroundColor(Color("RectText"))
+                                        .font(Font.system(size: 15, weight: .light))
+                                    Text("HOURLY FORECAST                                       ")
+                                        .foregroundColor(Color("RectText"))
+                                        .font(Font.system(size: 15, weight: .light))
+                                    
+                                }
+                                HStack(spacing: 20){
+                                        VStack(spacing: 5){
+                                            Text("Now")
+                                            .font(Font.system(size: 15, weight: .bold))
+                                            .foregroundColor(.white)
+                                            Image(systemName: "cloud.fill")
+                                                .foregroundColor(.white)
+                                            Text("4°")
+                                            .font(Font.system(size: 15, weight: .bold))
+                                            .foregroundColor(.white)
+                                    }
+                                    VStack(spacing: 5){
+                                        Text("1pm")
+                                            .font(Font.system(size: 15, weight: .bold))
+                                            .foregroundColor(.white)
+                                            
+                                        Image(systemName: "cloud.fill")
+                                            .foregroundColor(.white)
+                                            
+                                        Text("4°")
+                                        .font(Font.system(size: 15, weight: .bold))
+                                        .foregroundColor(.white)
+                                        
+                                    }
+                                        VStack(spacing: 5){
+                                            Text("2pm")
+                                                .font(Font.system(size: 15, weight: .bold))
+                                                .foregroundColor(.white)
+                                            Image(systemName: "cloud.drizzle.fill")
+                                                .foregroundColor(.cyan)
+                                            VStack{
+                                                Text("80%")
+                                                    .foregroundColor(.cyan)
+                                                    .font(Font.system(size: 10, weight: .regular))
+                                            }
+                                            Text("4°")
+                                            .font(Font.system(size: 15, weight: .bold))
+                                            .foregroundColor(.white)
+                                        }
+                                        VStack(spacing: 5){
+                                            Text("3pm")
+                                                .font(Font.system(size: 15, weight: .bold))
+                                                .foregroundColor(.white)
+                                            Image(systemName: "cloud.fill")
+                                                .foregroundColor(.white)
+                                            Text("4°")
+                                            .font(Font.system(size: 15, weight: .bold))
+                                            .foregroundColor(.white)
+                                        }
+                                        VStack(spacing: 5){
+                                            Text("4pm")
+                                                .font(Font.system(size: 15, weight: .bold))
+                                                .foregroundColor(.white)
+                                            Image(systemName: "cloud.fill")
+                                                .foregroundColor(.white)
+                                            Text("5°")
+                                            .font(Font.system(size: 15, weight: .bold))
+                                            .foregroundColor(.white)
+                                            
+                                        }
+                                        VStack(spacing: 5){
+                                            Text("4:53")
+                                                .font(Font.system(size: 15, weight: .bold))
+                                                .foregroundColor(.white)
+                                            Image(systemName: "sun.haze.fill")
+                                                .foregroundColor(.yellow)
+                                            Text("Sundown")
+                                            .font(Font.system(size: 15, weight: .bold))
+                                            .foregroundColor(.white)
+                                        }
+                                    }
+                                }
                             }
+                            
+                            
                         }
-                    }
-
-                        
                     }
                 }
             }
         }
-    }
-    
-    
-    struct Wheather_Previews: PreviewProvider {
-        static var previews: some View {
-            Wheather()
+        
+        
+        struct Wheather_Previews: PreviewProvider {
+            static var previews: some View {
+                Wheather()
+            }
         }
+        
     }
 
