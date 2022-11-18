@@ -8,10 +8,11 @@
 import SwiftUI
 
 @main
+
 struct TaskMod1App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Wheather()
         }
     }
 }
