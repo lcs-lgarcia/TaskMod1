@@ -90,7 +90,7 @@ struct Wheather: View {
                                         Image("im3")
                                             .resizable()
                                             .scaledToFit()
-                                            .frame(width: 20)
+                                            .frame(width: 0.2)
                                     }
                                         Text("Get notifications for severe weather, rain and snow.")
                                             .frame(maxWidth:250)
@@ -115,108 +115,109 @@ struct Wheather: View {
                             RoundedRectangle(cornerRadius: 20)
                                 .frame(width: 360,height: 150)
                                 .foregroundColor(Color("rect"))
-                            VStack(alignment: .leading,spacing: 10){
+                            VStack(alignment: .leading){
                                 HStack{
                                     Image(systemName:"clock")
                                         .foregroundColor(Color("RectText"))
                                         .font(Font.system(size: 15, weight: .light))
-                                        .padding()
+                                        
                                     Text("HOURLY FORECAST                                       ")
                                         .foregroundColor(Color("RectText"))
                                         .font(Font.system(size: 15, weight: .light))
-                                        .padding()
+                                        
                                     
                                 }
-                                HStack(spacing: 20){
-                                        VStack(spacing: 5){
-                                            Text("Now")
+                                VStack{
+                                    HStack{
+                                        Text("Now   ")
                                             .font(Font.system(size: 15, weight: .bold))
                                             .foregroundColor(.white)
-                                            .padding()
-                                            Image(systemName: "cloud.fill")
-                                                .foregroundColor(.white).padding()
-                                            Text("4°")
+                                        Text("1pm   ")
                                             .font(Font.system(size: 15, weight: .bold))
                                             .foregroundColor(.white)
-                                            .padding()
+                                        Text("2pm   ")
+                                            .font(Font.system(size: 15, weight: .bold))
+                                            .foregroundColor(.white)
+                                        Text("3pm   ")
+                                            .font(Font.system(size: 15, weight: .bold))
+                                            .foregroundColor(.white)
+                                        Text("4pm   ")
+                                            .font(Font.system(size: 15, weight: .bold))
+                                            .foregroundColor(.white)
+                                        Text("4:53")
+                                            .font(Font.system(size: 15, weight: .bold))
+                                            .foregroundColor(.white)
                                     }
-                                    VStack(spacing: 5){
-                                        Text("1pm")
-                                            .font(Font.system(size: 15, weight: .bold))
-                                            .foregroundColor(.white)
-                                            .padding()
-                                        Image(systemName: "cloud.drizzle.fill")
-                                            .foregroundColor(.cyan)
-                                            .padding()
-                                        VStack{
-                                            Text("80%")
-                                                .foregroundColor(.cyan)
-                                                .font(Font.system(size: 10, weight: .regular))
-                                                .padding()
+                                    HStack{
+                                        HStack{
+                                            VStack(spacing: 3){
+                                                
+                                                
+                                                Image(systemName: "cloud.fill")
+                                                    .foregroundColor(.white)
+                                                Text("   4°")
+                                                    .font(Font.system(size: 15, weight: .bold))
+                                                    .foregroundColor(.white)
+                                            }
                                         }
-                                
+                                        VStack(spacing: 3){
                                             
-                                        Text("4°")
-                                        .font(Font.system(size: 15, weight: .bold))
-                                        .foregroundColor(.white)
-                                        .padding()
-                                        
-                                    }
-                                        VStack(spacing: 5){
-                                            Text("2pm")
+                                            Image("im4")
+                                                .resizable()
+                                                .frame(width: 8,height: 8)
+                                            Text("   4°")
                                                 .font(Font.system(size: 15, weight: .bold))
                                                 .foregroundColor(.white)
-                                                .padding()
+                                            
+                                            
+                                        }
+                                        VStack(spacing: 3){
+                                            
                                             Image(systemName: "cloud.fill")
                                                 .foregroundColor(.white)
-                                                .padding()
-                                            Text("4°")
-                                            .font(Font.system(size: 15, weight: .bold))
-                                            .foregroundColor(.white)
-                                            .padding()
-                                        }
-                                        VStack(spacing: 5){
-                                            Text("3pm")
+                                            
+                                            Text("   4°")
                                                 .font(Font.system(size: 15, weight: .bold))
                                                 .foregroundColor(.white)
-                                                .padding()
+                                            
+                                        }
+                                        VStack(spacing: 3){
+                                            
+                                            
                                             Image(systemName: "cloud.fill")
                                                 .foregroundColor(.white)
-                                                .padding()
-                                            Text("4°")
-                                            .font(Font.system(size: 15, weight: .bold))
-                                            .foregroundColor(.white)
-                                            .padding()
-                                        }
-                                        VStack(spacing: 5){
-                                            Text("4pm")
+                                            
+                                            Text("   4°")
                                                 .font(Font.system(size: 15, weight: .bold))
                                                 .foregroundColor(.white)
-                                                .padding()
+                                            
+                                        }
+                                        VStack(spacing: 3){
+                                            
                                             Image(systemName: "cloud.fill")
                                                 .foregroundColor(.white)
-                                                .padding()
-                                            Text("5°")
-                                            .font(Font.system(size: 15, weight: .bold))
-                                            .foregroundColor(.white)
-                                            .padding()
-                                        }
-                                        VStack{
-                                            Text("4:53")
+                                            
+                                            Text("   5°")
                                                 .font(Font.system(size: 15, weight: .bold))
                                                 .foregroundColor(.white)
-                                                .padding()
+                                            
+                                        }
+                                        VStack(spacing: 3){
+                                            
                                             Image(systemName: "sun.haze.fill")
                                                 .foregroundColor(.yellow)
-                                                .padding()
-                                            Text("Sundown")
-                                            .font(Font.system(size: 15, weight: .bold))
-                                            .foregroundColor(.white)
-                                            .padding()
+                                            
+                                            Text("   Sundown")
+                                                .font(Font.system(size: 15, weight: .bold))
+                                                .foregroundColor(.white)
+                                            
                                         }
                                     }
                                 }
-                            .padding()
+                                       
+                                    }
+                                }
+                            
                             }
                             
                             
@@ -233,5 +234,5 @@ struct Wheather: View {
             }
         }
         
-    }
+    
 
